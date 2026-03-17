@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="icon" type="image/jpeg" href="/logo-noctisigma.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game | ÉGOSYSTÈME by Aina Mahery</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    
+    <!-- En-tête du jeu -->
+    <div class="game-details">
+      <div class="brand-section">
+        <!-- Logo/Image à uploader plus tard -->
+        <div class="brand-logo">
+          <img src="logo.jpeg" alt="Logo ÉGOSYSTÈME" />
+        </div>
+
+        <div class="brand-text">
+          <span class="brand">🐍 ÉGOSYSTÈME</span>
+          <span class="brand-signature">by Aina Mahery</span>
+        </div>
+      </div>
+
+      <div class="score-section">
+        <span class="score">Score : 0</span>
+        <span class="highscore">Meilleur score : 0</span>
+      </div>
+    </div>
+
+    <!-- Plateau de jeu -->
+    <div class="play-board"></div>
+
+    <!-- Indication pause -->
+    <div class="pause-hint">Appuyez sur ESPACE pour mettre en pause</div>
+  </div>
+
+  <!-- Fenêtre Game Over -->
+  <div class="game-over-modal" id="gameOverModal">
+    <div class="game-over-content">
+      <h2>Partie terminée !</h2>
+      <p>Votre score : <span id="finalScore">0</span></p>
+      <button onclick="restartGame()">Rejouer</button>
+    </div>
+  </div>
+
+  <!-- Fenêtre choix difficulté -->
+  <div class="difficulty-modal" id="difficultyModal">
+    <div class="difficulty-content">
+      <div class="brand-title">🐍 ÉGOSYSTÈME</div>
+      <div class="brand-tagline">Une expérience signée Aina Mahery</div>
+
+      <h2>Choisissez votre niveau</h2>
+      <p class="subtitle">Sélectionnez votre défi</p>
+
+      <button class="easy" onclick="startGame('easy')">Facile</button>
+      <button class="medium" onclick="startGame('medium')">Moyen</button>
+      <button class="hard" onclick="startGame('hard')">Difficile</button>
+    </div>
+  </div>
+
+  <!-- Fenêtre pause -->
+  <div class="pause-modal" id="pauseModal">
+    <div class="pause-content">
+      <h2>⏸️ Pause</h2>
+      <button onclick="resumeGame()">Reprendre</button>
+      <button onclick="quitToMenu()">Quitter</button>
+    </div>
+  </div>
+</body>
+</html>
